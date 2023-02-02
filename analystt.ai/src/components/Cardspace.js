@@ -6,13 +6,8 @@ const Cardspace = () => {
     const [details,setdetails]=useState([]);
     const [currentPage,setcurrentPage]=useState(1);
     const [postsPerPage,setpostsPerPage]=useState(3);
-    const [toggleStyle1,settoggleStyle1]=useState({
-        backgroundColor:"red"
-    })
-    const [toggleStyle2,settoggleStyle2]=useState({
-        backgroundColor:"red"
-    })
 
+    const [isLoading,setisLoading]=useState(true);
 
     const fetch_data=async()=>{
         try{
@@ -20,7 +15,7 @@ const Cardspace = () => {
 
             const res=await fetch(url);
             const data = await res.json();
-
+            setisLoading(false);
             setdetails(data);
             console.log(data);
         }catch(error){
@@ -53,6 +48,14 @@ const Cardspace = () => {
         }
     }
 
+
+ if (isLoading){
+    return (
+        <>
+        <h1 align="center">Loading...</h1>
+        </>
+    )
+ }
   return (
     <>
         <div id="prev_next_btn">
