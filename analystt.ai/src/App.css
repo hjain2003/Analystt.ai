@@ -1,37 +1,62 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+#navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85px;
+  background-color: black;
+  color: white;
+  line-height: 85px;
+}
 #container{
   display: flex;
   margin: auto;
-  width: 800px;
+  width: 1000px;
   justify-content: center;
   /* align-items: center; */
-  margin-top: 100px;
+  margin-top: 60px;
   background-color: aqua;
   border-radius: 10px;
   padding: 10px;
 }
-#card{
+#main_card_col{
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: beige;
-  padding: 10px;
-  height: 100px;
-  margin-top: 20px;
-  width: 750px;
-  border-radius: 5px;
+  flex-direction: column;
 }
-#maincard{
+#main_card_row{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-}
-#more_info{
-  cursor: pointer;
+  background-color: beige;
+  height: 100px;
+  width: 950px;
+  margin-top: 20px;
+  border-radius: 5px;
 }
 .Collapsible{
-  background-color: rgb(9, 189, 9);
-  border-radius: 10px;
-  padding: 5px;
+  /* display:block; */
   cursor: pointer;
+  background-color: greenyellow;
+  padding: 5px;
+}
+#more_info{
+  /* height: 120px; */
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+#desc_col_1,#desc_col_2{
+  display: flex;
+  flex-direction: column;
+}
+#desc_row{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
 }

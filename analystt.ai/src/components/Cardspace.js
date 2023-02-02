@@ -32,11 +32,21 @@ const Cardspace = () => {
                 {
                     details.map((element)=>{
                         return(
-                            <Card name={element.name} username={element.username} add={element.address.street} email={element.email}/>
+                            <Card 
+                            name={element.name}
+                            username={element.username} 
+                            add_street={element.address.street} 
+                            add_suite={element.address.suite}
+                            add_city={element.address.city}
+                            email={element.email} 
+                            phone={element.phone}
+                            company={element.company.name}
+                            desc={element.company.bs}
+                            website={element.website}
+                            />
                         )
                     })
                 }
-                <Card/>
             </div>
         </div>
     </>
