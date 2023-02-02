@@ -19,13 +19,11 @@ body{
 }
 #prev_next_btn{
   width: 1070px;
-  /* border: 2px solid black; */
   display: flex;
   margin: auto;
   margin-top: 50px;
   justify-content: space-between;
   padding: 10px;
-  /* border: 2px solid black; */
 }
 #prev,#next{
   height:35px;
@@ -44,18 +42,24 @@ body{
 #prev:active,#next:active{
   transform: scale(0.9);
 }
+#pageno{
+  background-color: red;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 7px;
+  color: white;
+}
 #container{
   display: flex;
   margin: auto;
   width: 1050px;
   justify-content: center;
-  /* align-items: center; */
-  /* margin-top: 60px; */
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   padding: 10px;
-  /* border:2px solid black; */
-  box-shadow: rgba(0, 0, 0, 0.16) 1px 3px 4px;
+  box-shadow: rgba(0, 0, 0, 0.16) 1px 3px 8px;
 }
 #main_card_col{
   display: flex;
@@ -65,7 +69,6 @@ body{
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* justify-content:space-around; */
   background-color: rgba(255, 255, 255, 0.948);
   height: 100px;
   width: 990px;
@@ -80,7 +83,6 @@ body{
 }
 #detail_2{
   position: absolute;
-  /* padding-right: 100px; */
   left: 35%;
 }
 #detail_3{
@@ -94,7 +96,6 @@ body{
   left: 70%;
 }
 .Collapsible{
-  /* display:block; */
   cursor: pointer;
   background-color: rgb(223, 251, 253);
   padding: 5px;
@@ -104,10 +105,8 @@ body{
   border-bottom-right-radius: 5px;
 }
 #more_info{
-  /* height: 120px; */
   display: flex;
   flex-direction: column;
-  /* border: 2px solid black; */
   border-radius: 5px;
   padding: 20px;
 }
@@ -121,7 +120,6 @@ body{
 #desc_row{
   display: flex;
   flex-direction: row;
-  /* justify-content: space-around; */
 }
 h3,#desc_heading{
   margin-left: 20px;
