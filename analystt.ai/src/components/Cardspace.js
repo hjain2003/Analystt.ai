@@ -4,6 +4,15 @@ import Card from './Card';
 const Cardspace = () => {
     
     const [details,setdetails]=useState([]);
+    const [currentPage,setcurrentPage]=useState(1);
+    const [postsPerPage,setpostsPerPage]=useState(3);
+    const [toggleStyle1,settoggleStyle1]=useState({
+        backgroundColor:"red"
+    })
+    const [toggleStyle2,settoggleStyle2]=useState({
+        backgroundColor:"red"
+    })
+
 
     const fetch_data=async()=>{
         try{
@@ -23,14 +32,37 @@ const Cardspace = () => {
         fetch_data();
     },[]);
 
-    
+    const lastPostIndex=currentPage*postsPerPage;
+    const firstPostIndex=lastPostIndex-postsPerPage;
+    const currentPosts=details.slice(firstPostIndex,lastPostIndex)
+
+    const prevPage=()=>{
+        if(currentPage==1){
+            alert("No pages before this")
+        }
+        else{
+            setcurrentPage(currentPage-1);
+        }
+    }
+    const nextPage=()=>{
+        if(currentPage==4){
+            alert("No pages after this")
+        }
+        else{
+            setcurrentPage(currentPage+1);
+        }
+    }
 
   return (
     <>
+        <div id="prev_next_btn">
+            <button id="prev" onClick={prevPage}>Prev</button>
+            <button id="next" onClick={nextPage}>Next</button>
+        </div>
         <div id="container">
             <div className="card_details">
                 {
-                    details.map((element)=>{
+                    currentPosts.map((element)=>{
                         return(
                             <Card 
                             name={element.name}
